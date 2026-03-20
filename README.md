@@ -10,10 +10,10 @@ Desenvolvemos o Conectaí a partir do entendimento de que muitas pessoas enfrent
 
 EQUIPE 🦊
 
-Isabelle;
-Joice;
-Gabrieli;
-Daiane;
+-Isabelle;
+-Joice;
+-Gabrieli;
+-Daiane;
 
 
 FERRAMENTAS UTILIZADAS 🦝
