@@ -1,0 +1,396 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Roboto Condensed", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+height:175px;
+background:#0B53B8;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 60px;
+color:white;
+}
+
+.logo{
+width: 175px;
+height: 175px;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+}
+
+/* RELÓGIO */
+#relogio{
+font-size:20px;
+font-weight:bold;
+}
+
+/* BANNER */
+
+.banner{
+background:#0B53B8;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px;
+color:white;
+}
+
+.banner h1{
+font-size:48px;
+font-weight:700;
+}
+
+/* VAGAS */
+
+.vagas{
+background:#3f7ed6;
+padding:60px;
+text-align:center;
+
+}
+
+.titulo-vagas{
+background:#eee;
+font-size: large;
+border:none;
+padding:10px 30px;
+border-radius:8px;
+margin-bottom:40px;
+}
+
+.grid-vagas{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+max-width:900px;
+margin:auto;
+
+}
+
+.card-vaga{
+background:white;
+border-radius:8px;
+padding:20px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card-vaga:hover{
+transform:scale(1.05);
+background:#f0c505;
+}
+
+.grid-vagas a{
+text-decoration:none;
+color:inherit;
+}
+
+/* SOBRE */
+
+.sobre{
+background:#3f7ed6;
+padding:60px;
+color:white;
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.titulo-sobre{
+background:#eee;
+font-size: large;
+border:none;
+padding:10px 30px;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.sobre p{
+max-width:900px;
+font-size: large;
+margin:20px auto;
+line-height:1.6;
+}
+
+.geracoes{
+display:flex;
+width:100%;
+}
+
+.geracoes img{
+width:33.33%;
+height:250px;
+object-fit:cover;
+}
+
+.titulo-equipe{
+background:#eee;
+font-size:large;
+border:none;
+padding:10px 30px;
+border-radius:8px;
+margin-bottom:40px;
+}
+
+.equipe{
+background:#367CDD;
+padding:60px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+/* container */
+
+.container-items{
+display:flex;
+gap:40px;
+}
+
+/* quadrados */
+
+.item-card{
+width:180px;
+height:180px;
+background:#0B53B8;
+color:white;
+font-size:20px;
+font-weight:bold;
+border:none;
+border-radius:10px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.3s;
+text-decoration:none;
+}
+
+/* efeito ao passar o mouse */
+
+.item-card:hover{
+transform:scale(1.1);
+color:#f0c505;
+}
+
+/* FOOTER */
+
+footer{
+background:#0B53B8;
+padding:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+color:white;
+}
+
+.copyright{
+margin-top:10px;
+font-size:14px;
+}
+
+.example-2 {
+list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 0;
+}
+
+.example-2 .icon-content {
+margin: 0 10px;
+position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+position: absolute;
+top: -30px;
+left: 50%;
+transform: translateX(-50%);
+color: #fff;
+padding: 6px 10px;
+border-radius: 5px;
+opacity: 0;
+visibility: hidden;
+font-size: 14px;
+transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+opacity: 1;
+visibility: visible;
+top: -50px;
+}
+
+.example-2 .icon-content a {
+position: relative;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+color: #4d4d4d;
+background-color: #fff;
+transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+position: relative;
+z-index: 1;
+width: 30px;
+height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+color: white;
+}
+
+.example-2 .icon-content a .filled {
+position: absolute;
+top: auto;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 0;
+background-color: #000;
+transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+height: 100%;
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+background-color: #128c7e;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+background-color: #3b5998;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+background: linear-gradient(
+45deg,
+#405de6,
+#5b51db,
+#b33ab4,
+#c135b4,
+#e1306c,
+#fd1f1f
+);
+}
+
+/* MENTORIA */
+
+/* GRID PARA VÍDEOS (SEM ALTERAR RESTO DO DESIGN) */
+
+.grid-mentoria{
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+gap: 30px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* AJUSTE DOS ITENS */
+
+.item-mentoria{
+flex-direction: column; /* antes era lado a lado */
+align-items: center;
+text-align: center;
+max-width: none;
+}
+
+/* VÍDEO MAIOR 🔥 */
+
+.item-mentoria iframe{
+width: 100%;
+height: 200px; /* aumentei aqui */
+border-radius: 8px;
+border: none;
+transition: 0.4s;
+}
+
+.item-mentoria:hover iframe{
+transform: scale(1.05);
+filter: brightness(0.8);
+}
+
+/* FORMULÁRIO */
+
+.contato{
+display: flex;
+justify-content: center;
+margin-top: 40px;
+}
+
+.form-box{
+background: #1e56a0;
+padding: 40px;
+border-radius: 6px;
+color: white;
+width: 400px;
+}
+
+form{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+input, textarea{
+padding: 8px;
+border-radius: 3px;
+border: none;
+}
+
+.btn-enviar{
+background: #0B53B8;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 10px;
+cursor: pointer;
+margin-top: 20px;
+font-weight: bold;
+}
+
+.btn-enviar:hover{
+background: #d9d9d9;
+}
