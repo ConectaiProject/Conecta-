@@ -68,23 +68,32 @@ NOS DEEM OPINIÕES E SUGESTÕES
 FALE CONOSCO
 </button>
 
+<form>
 
-<div class="form-box">
-<form> 
-<label>NOME:</label>
-<input type="text" placeholder="Digite seu nome" required><br>
-
-<br><label>EMAIL:</label>
-<input type="email" placeholder="Digite seu email" required> <br>
-
-<br><label>TELEFONE:</label>
-<input type="tel" placeholder="Digite seu telefone" required> <br>
-
-<br><label>DÚVIDA:</label>
-<textarea placeholder="Digite sua dúvida" required></textarea> <br><br>
-<button type="submit">ENVIAR</button>
-</form>
+<div class="form-group">
+  <label>NOME:</label>
+  <input type="text" placeholder="Digite seu nome" required>
 </div>
+
+<div class="form-group">
+  <label>EMAIL:</label>
+  <input type="email" placeholder="Digite seu email" required>
+</div>
+
+<div class="form-group">
+  <label>TELEFONE:</label>
+  <input type="tel" placeholder="Digite seu telefone" required pattern="[0-9]{10,11}" title="Digite um número de telefone válido com 10 ou 11 dígitos"  >
+</div>
+
+<div class="form-group">
+  <label>DÚVIDA:</label>
+  <textarea placeholder="Digite sua dúvida" required ></textarea>
+</div>
+
+<button type="button" onclick="enviarFormulario()">ENVIAR</button>
+
+</form>
+
 </section>
 
 <footer>
@@ -170,13 +179,35 @@ FALE CONOSCO
 
 </footer>
 
+<div id="popup" class="popup"> <!-- ALTERAÇÃO: início popup -->
+  <div class="popup-content">
+    <p>Recebemos seu formulário! Em breve entraremos em contato.</p>
+    <button onclick="fecharPopup()">OK</button>
+  </div>
+</div>
+
 <script src="script.js"></script>
+
 
 </body>
 </html>
 
 
 <script>
+
+  const form = document.querySelector("form"); // captura o form
+const popup = document.getElementById("popup"); // captura o popup
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // impede envio real
+  popup.style.display = "flex"; // mostra popup
+});
+
+function fecharPopup() {
+  popup.style.display = "none"; // fecha popup
+}
+
+// Relógio digital
 function atualizarRelogio() {
   const agora = new Date();
 
@@ -194,4 +225,19 @@ function atualizarRelogio() {
 
 setInterval(atualizarRelogio, 1000);
 atualizarRelogio();
+
+function enviarFormulario() {
+  // MOSTRAR POPUP
+  document.getElementById("popup").style.display = "block";
+
+  // LIMPAR OS CAMPOS
+  const inputs = document.querySelectorAll("#sobre input, #sobre textarea");
+  inputs.forEach(input => input.value = "");
+}
+
+// FUNÇÃO PARA FECHAR O POPUP
+function fecharPopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
 </script>
